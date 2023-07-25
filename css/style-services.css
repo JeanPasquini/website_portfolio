@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #0c192c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo da página ocupe pelo menos toda a altura da janela do navegador */
+}
+
+.navbar-brand{
+    color: white;
+
+    margin: 0 50px;
+}
+.navbar .navbar-nav a{
+    color: white;
+
+    margin: 0 5px;
+    
+}
+
+.navbar a{
+    font-size: 1.5em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.custom-nav-social-midias{
+    border: solid 1px white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffffff;
+
+    display: flex;
+    align-items: center;
+    
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+.custom-nav-social-midias:hover{
+    scale: 1.05;
+}
+
+  @media screen and (max-width: 992px) {
+    .custom-nav-social-midias {
+      border-radius: 4%;
+    }
+  }
+
+  .col img{
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 2%;
+    
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    text-align: center;
+    
+  }
+  
+  .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Define uma cor escura usando RGBA (RGB + canal alpha) */
+    opacity: 1; /* Define a opacidade inicial para a imagem ser mais escura */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a mudança de opacidade */
+    
+  }
+  
+  .image-container:hover::before {
+    opacity: 0.8; /* Altera a opacidade quando o mouse está sobre a imagem, tornando-a mais clara */
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 100%; /* Inicialmente, o overlay estará escondido abaixo do container */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.651));
+    color: #fff;
+    padding: 20px;
+    transition: top 0.5s ease; /* Adiciona uma transição suave para a animação */
+    
+  }
+  
+  .image-container:hover .overlay {
+    top: 0; /* Quando o mouse está sobre a imagem, o overlay sobe e se torna visível */
+  }
+
+  .overlay img{
+    width:64px;
+    height: 64px;
+
+    border: solid 2px white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffffff;
+
+    display: flex;
+    align-items: center;
+    
+    padding: 0.2em;
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1{
+    font-size: 2em;
+    text-align: center;
+  }
+
+  p{
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .container {
+    flex: 1; /* Faz com que o conteúdo ocupe todo o espaço disponível, exceto o rodapé */
+    margin-top: 100px;
+  }
+
+  .portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    .custom-nav-social-midias {
+      border-radius: 4%;
+    }
+
+    .container{
+        margin-top: 0px;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2,1fr);
+      }
+  }
+
+  @media screen and (max-width: 770px) {
+    .portfolio-container{
+        grid-template-columns: repeat(1,1fr);
+      }
+  }
+
+  .portfolio{
+    background-color: var(--second-bg-color);
+  }
+
+  .portfolio h2{
+    margin-bottom: 4rem;
+  }
+
