@@ -269,7 +269,7 @@ body{
     font-size: 1.5em;
 }
 
-.custom-nav-social-midias{
+.main .custom-nav-social-midias{
     border: solid 3px white;
     border-radius: 50%;
     box-shadow: 0 0 20px #ecdb3b;
@@ -281,7 +281,7 @@ body{
     margin: 0 1.5em;
 }
 
-.custom-nav-social-midias:hover{
+.main .custom-nav-social-midias:hover{
     scale: 1.30;
 }
 
@@ -510,6 +510,8 @@ body{
     padding: 100px 0;
 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+    margin-bottom: 5rem;
 }
 
 .col-portfolio img{
@@ -626,6 +628,70 @@ body{
     color: #ecdb3b;
 }
 
+.contact{
+  background: #0c192c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 100px 0;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+  margin-bottom: 5rem;
+}
+
+.letter-contact a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-contact{
+  font-size: 50em;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+}
+
+.title-contact h1{
+}
+
+.title-contact .first{
+  color:#ffffff;
+}
+
+.title-contact .second{
+  color: #ecdb3b;
+}
+
+.contact form{
+  margin: 0 auto;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 2rem 10rem;
+}
+
+.custom-nav-social-midias-contact{
+  display: flex;
+  align-items: center;
+  
+  padding: 0.2em;
+  margin: 0 1.5em;
+
+  width: 5rem;
+}
+
+.custom-nav-social-midias-contact:hover{
+  scale: 1.30;
+}
+
 footer {
     color: #fff;
     text-align: center;
@@ -634,4 +700,242 @@ footer {
     left: 0;
     width: 100%;
   }
+
+  .community{
+    background: #ffffff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 0;
+  
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  
+    margin-bottom: 5rem;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+  
+  :root {
+    --bg: #2c2e33;
+    --bg-card: #232328;
+    --bg-card-info: #111214;
+    --text-color: #f1f1f1;
+    --green: #57f287;
+    --red: #ed4245;
+    --blue: #5865f2;
+    --pink: #eb459e;
+    --yellow: #fee75c;
+  }
+  
+  .container .discord{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 6rem;
+  }
+  
+  .discord .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+  .discord input {
+    width: 100%;
+    background-color: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+  }
+  
+  .discord header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--blue);
+    height: 5rem;
+    font-size: 2.5rem;
+    gap: 1rem;
+  }
+  
+  .discord button {
+    background-color: var(--blue);
+    border: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.9rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+  .discord a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .discord .card {
+    display: flex;
+    max-width: 50rem;
+    flex-direction: column;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .discord .banner {
+    background-image: url("https://i.gifer.com/6FcF.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 150px;
+    border-radius: 12px 12px 0 0;
+  }
+  
+  .discord .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin-top: 1rem;
+  }
+  
+  .discord .profile-picture img {
+    position: absolute;
+    top: 100px;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: 5px solid var(--bg);
+  }
+  
+  .discord .badge {
+    display: flex;
+    background-color: var(--bg-card-info);
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+  
+  .discord .badge-default {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .discord .badge img {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .discord .info-container {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    background-color: var(--bg-card-info);
+    padding: 2rem;
+    margin: 1rem 2rem;
+    border-radius: 8px;
+  }
+  
+  .discord .info {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  .discord i {
+    font-weight: 700;
+  }
+  
+  .discord #id {
+    color: var(--blue);
+  }
+  
+  .discord #user {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: var(--pink);
+  }
+  
+  .discord #account {
+    color: var(--green);
+  }
+  
+  .discord .info-container button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+  
+  .discord button i {
+    font-size: 1rem;
+  }
+  
+  .discord button:hover {
+    background-color: hsl(235, 86%, 65%, 0.8);
+  }
+  
+  .discord footer {
+    text-align: center;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .discord .card {
+      width: 100%;
+    }
+  
+    .discord footer {
+      margin-top: 2rem;
+    }
+  }
+
+  .discord .button {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Estilo para o botão "Entrar no Servidor" */
+  .discord .discord-button {
+    background-color: #7289DA;
+  }
+  
+  /* Estilo quando o cursor passa sobre o botão */
+  .discord .button:hover {
+    background-color: #677BC4;
+  }
+  
+  /* Estilo quando o botão é clicado */
+  .discord .button:active {
+    background-color: #4E6AA7;
+  }
+
+  .discord h1{
+    color: #000;
+  }
+
+  .discord p{
+    color: #000;
+  }
+  
   
