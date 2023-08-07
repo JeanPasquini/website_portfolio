@@ -6,6 +6,7 @@
 
 body{
     color: white;
+    min-width: 380px;
 }
 
 .back-to-top-btn {
@@ -157,8 +158,8 @@ body{
 
 .caixa{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 30rem;
+    height: 30rem;
     background: rgba(04, 03, 05,.5);
     border-radius: 50%;
     overflow: hidden;
@@ -257,16 +258,16 @@ body{
 }
 
 .letter-main h3{
-    font-size: 3em;
+    font-size: 3rem;
 }
 
 .letter-main h1{
-    font-size: 2em;
+    font-size: 2rem;
     color: #ecdb3b;
 }
 
 .letter-main p{
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .main .custom-nav-social-midias{
@@ -317,7 +318,22 @@ body{
 
         grid-template-columns: repeat(1,1fr);
     }
+
+    .main{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-image{
+      width: 20rem;
+    }
+
+    .caixa{
+      width: 20rem;
+      height: 20rem;
+    }
   }
+  
 
   .social-midias{
     margin-bottom: 100px;
@@ -704,10 +720,8 @@ footer {
   .community{
     background: #ffffff;
     color: white;
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    padding: 100px 0;
+    padding: 30px 0;
   
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
   
@@ -727,21 +741,71 @@ footer {
     --pink: #eb459e;
     --yellow: #fee75c;
   }
-  
-  .container .discord{
+
+  .divisao {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+
+  .divisao-bar {
+    border-top: 1px solid #000; /* ou use border-bottom para uma linha abaixo do conteúdo */
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .title-community{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .img-discord-represent{
+    width: 28rem;
+  }
+
+  .discord-image{
+    width: 35rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    padding: 6rem;
+  }
+
+  .discord{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: flex-start;
   }
   
   .discord .card-container {
-    display: flex;
-    flex-direction: column;
+    width: 30rem;
   }
 
+  @media screen and (max-width: 1000px) {
+    
+    .discord{
+      grid-template-columns: repeat(1,1fr);
+    }
+  
+    .discord footer {
+      margin-top: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .discord .card-container{
+        width: 20rem;
+      }
+
+      .discord-image{
+        width: 23rem;
+      }
+
+      .img-discord-represent{
+        width: 20rem;
+      }
+  }
   
   .discord input {
     width: 100%;
@@ -931,11 +995,24 @@ footer {
   }
 
   .discord h1{
-    color: #000;
+    color: #7289da;
   }
 
   .discord p{
     color: #000;
   }
   
+  .title-community .first{
+    color:#08111f;
+}
   
+.project{
+  color: #000;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
