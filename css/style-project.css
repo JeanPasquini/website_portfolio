@@ -1,0 +1,52 @@
+.project{
+    color: #000;
+  
+    text-align: center;
+  
+    display: flex;
+    justify-content: center;
+  
+    flex-direction: column;
+  }
+  
+  .project .main-project-text{
+    padding: 0 200px;
+    margin: 0;
+  }
+  
+  .gamemaker-image{
+    width: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .project .main-project-text {
+      padding: 0 0;
+    }
+  
+    .gamemaker-image{
+      width: 23rem;
+    }
+  }
+  
+  .google-form{
+    width: 50rem;
+    height: 65rem;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .google-form{
+      width: 30rem;
+      height: 65rem;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .google-form{
+      width: 100%;
+      height: 75rem;
+    }
+  }

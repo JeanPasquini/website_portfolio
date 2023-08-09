@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: white;
+    min-width: 380px;
+}
+
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at center, #111 0%, #000 100%);
+    z-index: -1;
+}
+
+.space-background::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-image: radial-gradient(ellipse at center, rgba(22, 33, 133, 0.575) 0%, rgba(0, 0, 0, 1) 100%), 
+                      url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 1;
+    animation: animateSpace 20s linear infinite; /* Ajuste a duração (30s) conforme necessário */
+}
+
+@keyframes animateSpace {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.navbar-brand{
+    color:  #ffffff ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 5em;
+
+    margin: 0 50px;
+}
+
+.navbar-brand:hover{
+    color:  #ffffff;
+}
+
+.navbar .navbar-nav a{
+    color: #C0C0C0;
+
+    margin: 0 15px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+.navbar .navbar-nav a:hover{
+    color: #ecdb3b;
+    
+}
+
+.navbar-letter{
+    font-size: 2em;
+}
+
+.letter-main h3{
+    font-size: 3rem;
+}
+
+.letter-main h1{
+    font-size: 2rem;
+    color: #ecdb3b;
+}
+
+.letter-main p{
+    font-size: 1.5rem;
+}
+
+.main .custom-nav-social-midias{
+    border: solid 3px white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ecdb3b;
+
+    display: flex;
+    align-items: center;
+    
+    padding: 0.2em;
+    margin: 0 1.5em;
+}
+
+.main .custom-nav-social-midias:hover{
+    scale: 1.30;
+}
+
+.col-main a{
+    margin-top: 10px;
+    background: #ecdb3b;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #ffffff;
+    color: #6b6b6b;
+    font-size: 1em;
+    letter-spacing: .05em;
+    text-decoration: none;
+    transition: .05s;
+    font-weight: 600;
+}
+
+.col-main a:hover{
+    letter-spacing: .2em;
+}
+
+@media screen and (max-width: 992px) {
+
+    .main{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-image{
+      width: 20rem;
+    }
+  }

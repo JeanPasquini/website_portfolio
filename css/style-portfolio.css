@@ -1,0 +1,268 @@
+.portfolio{
+    background: #ffffff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 0;
+
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+
+    margin-bottom: 5rem;
+}
+
+.col-portfolio img{
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 2%;
+}
+
+.image-container-porfolio{
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    text-align: center;
+    border-radius: 4%;
+    
+  }
+  
+  .image-container-porfolio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Define uma cor escura usando RGBA (RGB + canal alpha) */
+    opacity: 1; /* Define a opacidade inicial para a imagem ser mais escura */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a mudança de opacidade */
+  }
+  
+  .image-container-porfolio:hover::before {
+    opacity: 0.8; /* Altera a opacidade quando o mouse está sobre a imagem, tornando-a mais clara */
+  }
+  
+  .image-container-porfolio img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 100%; /* Inicialmente, o overlay estará escondido abaixo do container */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.651));
+    color: #fff;
+    padding: 20px;
+    transition: top 0.5s ease; /* Adiciona uma transição suave para a animação */
+  }
+  
+  .image-container-porfolio:hover .overlay {
+    top: 0; /* Quando o mouse está sobre a imagem, o overlay sobe e se torna visível */
+  }
+
+  .overlay img{
+    width:64px;
+    height: 64px;
+
+    border: solid 2px white;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ffffff;
+
+    display: flex;
+    align-items: center;
+    
+    padding: 0.2em;
+  }
+
+  .portfolio-container-port{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .letter-porfolio a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-portfolio{
+    font-size: 50em;
+    text-align: center;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.title-portfolio h1{
+    margin: 0 5px;
+}
+
+.title-portfolio .first{
+    color:#08111f;
+}
+
+.title-portfolio .second{
+    color: #ecdb3b;
+}
+
+.main-portfolio{
+  margin-top: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.main-portfolio .image-container-main {
+  position: relative;
+  width: 100rem;
+  height: 25rem;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #000000;
+
+  transition: 0.5s;
+}
+
+.main-portfolio .image-container-main:hover{
+  border: solid 5px #fdff82;
+  box-shadow: 0 0 30px #ecdb3b;
+}
+
+.main-portfolio .image-container-main img {
+  width: 100rem;
+  height: 25rem;
+  object-fit:cover;
+}
+
+.main-portfolio .overlay-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 0%;
+
+
+  text-align: center;
+}
+
+.main-portfolio .overlay-main a {
+  text-decoration: none;
+}
+
+.portfolio .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .portfolio .button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+  background: rgba(236, 219, 59,1);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(236, 219, 59,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+  
+    
+    }
+  
+    .portfolio button::before {
+    content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #ffffff;
+    box-shadow: 0 0 60px #0c192c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .portfolio .button:hover, .portfolio .button:focus {
+    color: #ffffff;
+    transform: translateY(-6px);
+  }
+  
+  .portfolio button:hover::before, .portfolio button:focus::before {
+    opacity: 1;
+  }
+  
+  .portfolio button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #fff176;
+    position: absolute;
+    z-index: +1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .portfolio button:hover::after, .portfolio button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 1rem;
+      height: 1rem;
+      opacity: 1;
+    }
+    100% {
+      width: 20rem;
+      height: 20rem;
+      opacity: 0;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .portfolio-container-port{
+        grid-template-columns: repeat(2,1fr);
+      }
+}
+
+  @media screen and (max-width: 700px) {
+    .portfolio-container-port{
+        grid-template-columns: repeat(1,1fr);
+      }
+  }
