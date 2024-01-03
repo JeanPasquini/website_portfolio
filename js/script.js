@@ -56,3 +56,21 @@ function isElementInViewport(el) {
   window.addEventListener('load', handleScroll);
   window.addEventListener('scroll', handleScroll);
   
+  function mostrarElemento() {
+    var elemento = document.getElementById('container');
+    elemento.classList.remove('esconder');
+    elemento.classList.add('mostrar');
+  }
+  
+  // Função para esconder a xícara e o vapor após um intervalo de tempo
+  function esconderElemento() {
+    var elemento = document.getElementById('container');
+    elemento.classList.remove('mostrar');
+    elemento.classList.add('esconder');
+  }
+  
+  // Mostrar elemento após um intervalo de tempo
+  mostrarElemento();
+  
+  // Esconder elemento após 5 segundos
+  setTimeout(esconderElemento, 5000); // 5000 milissegundos = 5 segundos

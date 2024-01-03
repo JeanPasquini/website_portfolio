@@ -27,8 +27,8 @@ body{
     width: 100%;
     height: 100%;
     background-color: #000;
-    background-image: radial-gradient(ellipse at center, rgba(22, 33, 133, 0.575) 0%, rgba(0, 0, 0, 1) 100%), 
-                      url('../images/background.jpg');
+    background-image: radial-gradient(ellipse at center, rgba(22, 33, 133, 0.096) 0%, rgba(0, 0, 0, 1) 100%), 
+                      url('../images/background2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -109,7 +109,7 @@ body{
 
 .col-main a{
     margin-top: 10px;
-    background: #ecdb3b;
+    background: #ffffff;
     padding: 10px 20px;
     border-radius: 25px;
     box-shadow: 0 0 10px #ffffff;
@@ -123,6 +123,10 @@ body{
 
 .col-main a:hover{
     letter-spacing: .2em;
+}
+
+.main .letter-portfolio{
+    color: #ffffffad;
 }
 
 @media screen and (max-width: 992px) {

@@ -97,6 +97,135 @@ footer {
     width: 100%;
   }
 
+  .background-completo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #962626;
+    z-index: 0; /* Coloque um índice Z menor para que fique por trás do copo */
+  }
 
+  #container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Certifique-se de que o copo fique acima do fundo */
+  }
+  .steam {
+    position: absolute;
+    height: 140px;
+    width: 140px;
+    border-radius: 80%;
+    background-color: #fff;
+    margin-top: -75px;
+    margin-left: 75px;
+    z-index: 0;
+    opacity: 0;
+  }
+  
+  #steam1 {
+    -webkit-animation: steam1 5s ease-in infinite;
+    animation: steam1 4s ease-out infinite;
+  }
+  
+  #steam3 {
+    -webkit-animation: steam1 5s ease-out 1s infinite;
+    animation: steam1 4s ease-out 1s infinite;
+  }
+  
+  @-webkit-keyframes steam1 
+  {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+  }
+  
+  @keyframes steam1 
+  {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(-20px) scale(1); opacity: 0;}
+  }
+  
+  #steam2 {
+    -webkit-animation: steam2 4s ease-out 0.5s infinite;
+    animation: steam2 4s ease-out 0.5s infinite;
+  }
+  
+  #steam4 {
+    -webkit-animation: steam2 4s ease-out 1.5s infinite;
+    animation: steam2 4s ease-out 1.5s infinite;
+  }
+  
+  @-webkit-keyframes steam2 {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+  }
+  
+  @keyframes steam2 {
+    0% {transform: translateY(0) translateX(0) scale(0.25); opacity: 0.2;}
+    100% {transform: translateY(-200px) translateX(20px) scale(1); opacity: 0;}
+  }
+  
+  #cup {
+    z-index: 1;
+  }
+  
+  #cup-body {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 0 0 150px 150px;
+    background-color: rgb(61, 28, 18);
+    margin: auto;
+    display: inline-block;
+    overflow: hidden;
+    /*opacity: 0.8;*/
+    z-index: 1;
+  }
+  
+  
+  #cup-handle {
+    position: relative;
+    height: 75px;
+    width: 40px;
+    border-radius: 0 150px 150px 0;
+    border: 15px solid #490e0e;
+    margin-bottom: 95px;
+    margin-left: 190px;
+    display: inline-block;
+    z-index: 0;
+  }
+  
+  #saucer {
+    position: absolute;
+    height: 30px;
+    width: 230px;  
+    border-radius: 0 0 100px 100px;
+    background-color: #d3caca;
+    margin-top: -32px;
+    margin-left: 5px;
+    z-index: 2;
+  }
+  
+  #shadow {
+    height: 10px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: -5px;
+    margin-left: 6px;
+    background-color: #721d0e;
+  }
 
+  .mostrar {
+    opacity: 1;
+    /* Outras propriedades CSS para mostrar os elementos, se necessário */
+  }
+  
+  /* Adicione esta classe para esconder os elementos */
+  .esconder {
+    opacity: 0;
+    /* Outras propriedades CSS para esconder os elementos, se necessário */
+  }
 
