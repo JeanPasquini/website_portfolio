@@ -11,7 +11,6 @@
   <!-- BOOTSTRAP LINKS !!!!FINISH!!! -->
   <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-letters-ocean.css">
     <link rel="stylesheet" href="css/style-about.css">
     <link rel="stylesheet" href="css/style-community.css">
     <link rel="stylesheet" href="css/style-contact.css">
@@ -19,10 +18,15 @@
     <link rel="stylesheet" href="css/style-services.css">
     <link rel="stylesheet" href="css/style-project.css">
     <link rel="stylesheet" href="css/style-portfolio.css">
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/floating-wpp.css">
+    <script type="text/javascript" src="js/floating-wpp.js"></script>
   <!-- FINISH CSS -->
 </head>
 <body> 
   <!-- BACKGROUND -->
+    <div class="whats" id="myButton"></div>
     <div class="space-background"></div>
     <div class="background-completo" id="container">
     <div id="container">
@@ -136,6 +140,46 @@
             </p>
           </div>
         </div>
+      </div>
+      <div class="about-timeline">
+      <div class="center">
+      <button class="timeline-button" data-bs-toggle="collapse" data-bs-target="#webdevelop">
+        <img src="images/cloud-icone.png" alt="" class="timeline-img">
+      </button>
+      </div>
+      <div id="webdevelop" class="collapse">
+          <section class="timeline">
+            <ul>
+              <li>
+                <div>
+                  <h2>Project 1</h2> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Project 2</h2> Proin quam velit, efficitur vel neque vitae, rhoncus commodo mi. Suspendisse finibus mauris et bibendum molestie. Aenean ex augue, varius et pulvinar in, pretium non nisi.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Project 3</h2> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Project 4</h2> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h2>Project 5</h2> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                </div>
+              </li>
+           
+            </ul>
+          
+          </section>
+      </div>
       </div>
     </section>
     <!-- COMMUNITY -->
@@ -391,10 +435,22 @@
                   "max-glare":1,
       
               });
-              
-              
-          
         </script>
+        <script type="text/javascript">
+          $(function () {
+              $('#myButton').floatingWhatsApp({
+                  phone: '5519995296233',
+                  popupMessage: "Send me a message on 'Whatsapp' 📱                               Type 1 - To know more about my job 💻                         Type 2 - To start using our Discord Bot 🤖                       Type 3 - To help our community 👨‍👩‍👧‍👦                               Type your message - 'Your message' 💬",
+                  message: "1",
+                  showPopup: true,
+                  showOnIE: false,
+                  headerTitle: "Welcome Pasquini's",
+                  headerColor: '#ecdb3b',
+                  backgroundColor: 'crimson',
+                  buttonImage: '<img src="/images/icone_nav.png" />'
+              });
+          });
+      </script>
   <!-- FINISHSCRIPTS -->
 </body>
 </html>

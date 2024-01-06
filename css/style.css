@@ -13,7 +13,7 @@ body{
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 120px;
   background-color: #08111f;
   color: white;
   padding: 1px;
@@ -104,16 +104,19 @@ footer {
     width: 100%;
     height: 100%;
     background: #962626;
-    z-index: 0; /* Coloque um índice Z menor para que fique por trás do copo */
+    z-index: 2; /* Coloque um índice Z menor para que fique por trás do copo */
   }
 
   #container {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1; /* Certifique-se de que o copo fique acima do fundo */
+    z-index: 3;
+    opacity: 1;
+    transition: opacity 2s ease;
   }
+  
   .steam {
     position: absolute;
     height: 140px;
@@ -192,7 +195,7 @@ footer {
     width: 40px;
     border-radius: 0 150px 150px 0;
     border: 15px solid #490e0e;
-    margin-bottom: 95px;
+    margin-bottom: 125px;
     margin-left: 190px;
     display: inline-block;
     z-index: 0;
@@ -227,5 +230,9 @@ footer {
   .esconder {
     opacity: 0;
     /* Outras propriedades CSS para esconder os elementos, se necessário */
+  }
+
+  .whats{
+    color: black;
   }
 

@@ -30,6 +30,25 @@ document.addEventListener("DOMContentLoaded", () => {
   type(); // Inicia o efeito de digitação
 });
 
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+document.addEventListener("scroll", function () {
+  const mensagens = document.querySelectorAll(".fade-in");
+  mensagens.forEach(function (mensagem) {
+    if (isInViewport(mensagem)) {
+      mensagem.classList.add("appear");
+    }
+  });
+});
+
 
 
 
@@ -53,24 +72,54 @@ function isElementInViewport(el) {
   }
   
   // Execute a função quando a página é carregada e quando o usuário rola a página
-  window.addEventListener('load', handleScroll);
-  window.addEventListener('scroll', handleScroll);
-  
   function mostrarElemento() {
     var elemento = document.getElementById('container');
-    elemento.classList.remove('esconder');
-    elemento.classList.add('mostrar');
+    elemento.style.opacity = '1'; // Garante que a opacidade esteja definida como visível
   }
-  
-  // Função para esconder a xícara e o vapor após um intervalo de tempo
+
   function esconderElemento() {
     var elemento = document.getElementById('container');
-    elemento.classList.remove('mostrar');
-    elemento.classList.add('esconder');
+    elemento.style.opacity = '0'; // Define a opacidade como 0, o elemento vai desaparecer gradualmente
+
+    // Após a transição, remova o elemento da DOM
+    setTimeout(function() {
+      elemento.remove(); // Isso removerá o elemento completamente da DOM
+    }, 2000); // Defina o tempo igual ao tempo de transição (2000ms = 2s)
   }
-  
-  // Mostrar elemento após um intervalo de tempo
+
+  // Mostrar elemento
   mostrarElemento();
-  
+
   // Esconder elemento após 5 segundos
-  setTimeout(esconderElemento, 5000); // 5000 milissegundos = 5 segundos
+  setTimeout(esconderElemento, 3000); // 5000 milissegundos = 5 segundos
+
+  (function () {
+    "use strict";
+  
+    // define variables
+    var items = document.querySelectorAll(".timeline li");
+  
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  
+    function callbackFunc() {
+      for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+          items[i].classList.add("in-view");
+        }
+      }
+    }
+  
+    // listen for events
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+  })();
