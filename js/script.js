@@ -1,4 +1,4 @@
-const words = ["Hi I'm Jean Pasquini", "I'll be your Web Developer"]; // Insira as palavras que deseja que sejam digitadas
+const words = ["Hi I'm Jean Pasquini", "I'll be your Developer"]; // Insira as palavras que deseja que sejam digitadas
 const typingEffectElement = document.querySelector(".typing-effect .word");
 const cursorElement = document.querySelector(".typing-effect .cursor");
 
